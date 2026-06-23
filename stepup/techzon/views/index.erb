@@ -1,0 +1,18 @@
+<div class="top">
+  <h1>Techzon</h1>
+</div>
+<div class="item-container">
+  <% if @items.empty? %>
+    <p>まだ商品がありません</p>
+  <% else %>
+    <% @items.each do |item| %>
+      <div class="item">
+        <a href="/item/<%= item.id %>">
+          <img src="">
+        </a>
+        <p><%= item.name %></p>
+        <p class="item-price"><%= item.price %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>服薬記録サービス</title>
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/js/font.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title white-text">
+        <a href="/">服薬記録サービス</a>
+      </h1>
+    </div>
+    <div class="list">
+      <% @medicines.each do |medicine| %>
+        <div class="item white-text">
+          <div class="text-box">
+            <p><%= medicine.name %></p>
+            <p><%= medicine.stock %>個</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <a href="/item/new" class="material-icons pos-fixed">
+      <i class="fa-solid fa-plus"></i>
+    </a>
+  </body>
+</html>
